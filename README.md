@@ -67,3 +67,7 @@ plugins=(
 # 重启
 source ~/.zshrc
 ```
+
+#### (7) 个性化配置
+
+* [my.zsh](./custom/my.zsh)
