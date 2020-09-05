@@ -56,6 +56,8 @@ ZSH_THEME="powerlevel10k/powerlevel10k"
 # 设置插件
 plugins=(
   git
+  my
+  sudo
   extract
   history
   zsh-autosuggestions
