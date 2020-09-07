@@ -1,17 +1,6 @@
 #!/usr/bin/env zsh
 
 #-----------------------------------------------------------------------------------------------------------------------
-# Ubuntu
-#-----------------------------------------------------------------------------------------------------------------------
-alias ubuntu.update=ubuntu_update
-ubuntu_update() {
-  sudo apt-get update -y
-  sudo apt-get upgrade -y
-  sudo apt-get dist-upgrade -y
-  sudo apt-get autoremove -y
-}
-
-#-----------------------------------------------------------------------------------------------------------------------
 # System
 #-----------------------------------------------------------------------------------------------------------------------
 alias sys.reboot=sys_reboot
@@ -22,6 +11,19 @@ sys_reboot() {
 alias sys.shutdown=sys_shutdown
 sys_shutdown() {
   sudo shutdown now
+}
+
+alias sys.update=ubuntu_update
+ubuntu_update() {
+  sudo apt-get update -y
+  sudo apt-get upgrade -y
+  sudo apt-get dist-upgrade -y
+  sudo apt-get autoremove -y
+}
+
+alias sys.info=ubuntu_info
+ubuntu_info() {
+  lsb_release -a
 }
 
 #-----------------------------------------------------------------------------------------------------------------------
