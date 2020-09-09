@@ -41,7 +41,29 @@ git clone https://github.com/zsh-users/zsh-autosuggestions.git $ZSH_CUSTOM/plugi
 git clone https://github.com/zsh-users/zsh-syntax-highlighting.git $ZSH_CUSTOM/plugins/zsh-syntax-highlighting
 ```
 
-#### (6) 配置
+#### (6) 下载和安装`autojump` 插件
+
+```bash
+# MacOS
+brew install autojump
+
+# Ubuntu
+sudo apt-get install autojump -y
+
+# CentOS
+sudo yum install autojump -y
+```
+
+在`.zshrc`最后添加
+
+```bash
+# Enable autojump plugin
+[[ ! -f /usr/share/autojump/autojump.sh ]] || source /usr/share/autojump/autojump.sh
+```
+
+* [autojump官方](https://github.com/wting/autojump)
+
+#### (7) 配置
 
 ```bash
 vim ~/.zshrc
@@ -60,6 +82,10 @@ plugins=(
   sudo
   extract
   history
+  docker
+  docker-compose
+  kubectl
+  autojump
   zsh-autosuggestions
   zsh-syntax-highlighting
 )  
@@ -70,6 +96,6 @@ plugins=(
 source ~/.zshrc
 ```
 
-#### (7) 个性化配置
+#### (8) 个性化配置
 
 * [my.zsh](./custom/my.zsh)
