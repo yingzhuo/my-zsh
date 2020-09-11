@@ -58,7 +58,7 @@ sudo yum install autojump -y
 
 ```bash
 # Enable autojump plugin
-[[ ! -f /usr/share/autojump/autojump.sh ]] || source /usr/share/autojump/autojump.sh
+[[ -f /usr/share/autojump/autojump.sh ]] && source /usr/share/autojump/autojump.sh
 ```
 
 * [autojump官方](https://github.com/wting/autojump)
@@ -98,4 +98,5 @@ source ~/.zshrc
 
 #### (8) 个性化配置
 
-* [my.zsh](./custom/my.zsh)
+* 自定义命令别名与环境变量[my.zsh](./custom/my.zsh)
+* 自定义插件[my](./custom/plugins/my)

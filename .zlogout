@@ -1,3 +1,4 @@
 #!/usr/bin/env zsh
 
-history -c
+# 退出会话时删除命令记录
+# history -c
