@@ -30,6 +30,7 @@ alias mv='mv -i'
 alias rm='rm -i'
 
 alias q='exit'
+alias qc='history -c && exit'
 
 if [[ $EUID -eq -0 ]]; then
     alias root='true'
@@ -57,4 +58,4 @@ export GPG_TTY=$(tty)
 export HISTSIZE=1000
 export HISTFILE=~/.zsh_history
 export HISTFILESIZE=1000
-export HISTCONTROL=ignoreboth
+export HISTCONTROL=ignoreboth:erasedups

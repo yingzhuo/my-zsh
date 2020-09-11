@@ -25,12 +25,6 @@ ubuntu_update() {
   sudo apt-get autoremove -y
 }
 
-# 显示系统信息
-alias sys.info=ubuntu_info
-ubuntu_info() {
-  lsb_release -a
-}
-
 # 同步时间
 alias sys.ntp.update=ntp_update
 ntp_update() {
