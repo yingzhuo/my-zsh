@@ -25,6 +25,17 @@ ubuntu_update() {
   sudo apt-get autoremove -y
 }
 
+# 清理系统
+alias sys.cleanup=ubuntu_cleanup
+ubuntu_cleanup() {
+  sudo rm -rf /var/log/* &> /dev/null
+  sudo journalctl --vacuum-time=3d &> /dev/null
+#  snap list --all | awk '/disabled/{print $1, $3}' |
+#    while read snapname revision; do
+#        snap remove "$snapname" --revision="$revision"
+#    done
+}
+
 # 同步时间
 alias sys.ntp.update=ntp_update
 ntp_update() {
