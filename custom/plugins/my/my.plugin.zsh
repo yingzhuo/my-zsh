@@ -28,12 +28,7 @@ ubuntu_update() {
 # 清理系统
 alias sys.cleanup=ubuntu_cleanup
 ubuntu_cleanup() {
-  sudo rm -rf /var/log/* &> /dev/null
   sudo journalctl --vacuum-time=3d &> /dev/null
-#  snap list --all | awk '/disabled/{print $1, $3}' |
-#    while read snapname revision; do
-#        snap remove "$snapname" --revision="$revision"
-#    done
 }
 
 # 同步时间
@@ -49,17 +44,16 @@ ntp_update() {
 # 清理docker
 alias docker.clean=docker_clean
 docker_clean() {
-  sudo docker system prune -f
-}
-
-# 强制清理docker
-alias docker.clean.force=docker_clean_force
-docker_clean_force() {
-  sudo docker system prune -a -f
+  if [[ "$1" == "--force"  || "$1" == "-f" ]]; then
+    sudo docker system prune -a -f
+  else
+    sudo docker system prune -a
+  fi
 }
 
 # 重启docker服务
 alias docker.restart=docker_restart
 docker_restart() {
+  sudo systemctl daemon-reload
   sudo systemctl restart docker.service
 }
