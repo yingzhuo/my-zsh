@@ -45,7 +45,7 @@ base64_encode() {
   if [[ "1" != "$#" ]]; then
     return 1
   fi
-  echo "$@" | base64
+  echo -n "$@" | base64
 }
 
 alias base64decode=base64_decode
@@ -53,7 +53,7 @@ base64_decode() {
   if [[ "1" != "$#" ]]; then
     return 1
   fi
-  echo "$@" | base64 -d
+  echo -n "$@" | base64 -d
 }
 
 #-----------------------------------------------------------------------------------------------------------------------
