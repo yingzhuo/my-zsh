@@ -19,6 +19,7 @@ sys_shutdown() {
 # 更新系统
 alias sys.update=ubuntu_update
 ubuntu_update() {
+  sudo hwclock --hctosys
   sudo apt-get update -y
   sudo apt-get upgrade -y
   sudo apt-get dist-upgrade -y
