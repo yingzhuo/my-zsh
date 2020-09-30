@@ -85,6 +85,7 @@ plugins=(
   docker
   docker-compose
   kubectl
+  helm
   autojump
   zsh-autosuggestions
   zsh-syntax-highlighting

@@ -30,7 +30,6 @@ alias mv='mv -i'
 alias rm='rm -i'
 
 alias q='exit'
-alias qc='history -c && exit'
 
 if [[ $EUID -eq -0 ]]; then
     alias root='true'
@@ -55,9 +54,9 @@ export LC_ALL=en_US.UTF-8
 export GPG_TTY=$(tty)
 
 # History
-export HISTSIZE=1000
+export HISTSIZE=1024
 export HISTFILE=~/.zsh_history
-export HISTFILESIZE=1000
+export HISTFILESIZE=1024
 export HISTCONTROL=ignoreboth:erasedups
 
 # bin / sbin
@@ -65,19 +64,19 @@ export HISTCONTROL=ignoreboth:erasedups
 [[ -d $HOME/sbin ]] && export PATH=$PATH:$HOME/sbin
 
 # Java
-# export JAVA_HOME=/opt/java8
+# export JAVA_HOME=/var/lib/java8
 # export PATH=$PATH:$JAVA_HOME/bin
 
 # Gradle
-# export GRADLE_HOME=/opt/gradle
+# export GRADLE_HOME=/var/lib/gradle
 # export PATH=$PATH:$GRADLE_HOME/bin
 
 # Maven
-# export MAVEN_HOME=/opt/apache-maven
+# export MAVEN_HOME=/var/lib/apache-maven
 # export PATH=$PATH:$MAVEN_HOME/bin
 
 # Ant
-# export ANT_HOME=/opt/apache-ant
+# export ANT_HOME=/var/lib/apache-ant
 # export PATH=$PATH:$ANT_HOME/bin
 
 # 其他
