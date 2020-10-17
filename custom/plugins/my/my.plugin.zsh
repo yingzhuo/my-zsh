@@ -67,7 +67,7 @@ docker_clean() {
   if [[ "$1" == "--force"  || "$1" == "-f" ]]; then
     sudo docker system prune -a -f
   else
-    sudo docker system prune -a
+    sudo docker system prune -f
   fi
 }
 
