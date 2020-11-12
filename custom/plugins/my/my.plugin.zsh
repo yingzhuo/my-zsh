@@ -24,6 +24,7 @@ ubuntu_update() {
   sudo apt-get upgrade -y
   sudo apt-get dist-upgrade -y
   sudo apt-get autoremove -y
+  sudo rm -rf /var/cache/apt/*
 }
 
 # 清理系统
